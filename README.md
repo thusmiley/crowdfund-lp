@@ -18,7 +18,7 @@ Crowdfunding product page
 ### Links
 
 - Git URL: https://github.com/thusmiley/crowdfund-lp.git
-- Live Site URL: https://thusmiley.github.io/clipboard-landing-page/
+- Live Site URL: https://thusmiley.github.io/crowdfund-lp/
 
 ### Built with
 

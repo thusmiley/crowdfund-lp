@@ -55,6 +55,7 @@ img {
 
 button, input {
   cursor: pointer;
+  box-shadow: none;
 }
 
 .cta {
@@ -213,6 +214,7 @@ header .container {
 
 .bookmark.active circle {
   fill: hsl(176deg, 50%, 47%);
+  box-shadow: none;
 }
 
 .bookmark.active path {
