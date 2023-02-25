@@ -8,6 +8,7 @@
 body {
   font-family: "Commissioner", sans-serif;
   background-color: #F2F2F2;
+  position: relative;
 }
 
 h1, h2, h3, h4 {
@@ -165,7 +166,7 @@ header .container {
   width: 94%;
   margin: 0 3%;
   position: absolute;
-  top: 25%;
+  top: 70%;
 }
 
 .project-header {
@@ -312,11 +313,11 @@ header .container {
 /*-----------PROJECT POPUP-----------*/ 
 #popup {
   display: none;
-  overflow: auto;
+  overflow-y: scroll;
   width: 94%;
   margin: 0 3%;
   position: fixed;
-  top: 10%;
+  top: 20%;
   bottom: 5%;
   scrollbar-width: none;
 }
@@ -618,7 +619,6 @@ input::-webkit-inner-spin-button {
     width: 100%;
     max-width: 730px;
     margin: 0 auto;
-    top: 15%;
     left: 0;
     right: 0;
   }
@@ -764,7 +764,6 @@ input::-webkit-inner-spin-button {
     margin: 0 auto;
   }
   #project .container {
-    top: 20%;
     margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */

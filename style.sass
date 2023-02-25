@@ -8,7 +8,8 @@ $dark-gray: hsl(0, 0%, 48%)
     padding: 0
 body
     font-family: 'Commissioner', sans-serif
-    background-color: #F2F2F2   
+    background-color: #F2F2F2 
+    position: relative
 h1, h2, h3, h4
     font-weight: 700
 h1
@@ -112,7 +113,7 @@ header .container
     width: 94%
     margin: 0 3%
     position: absolute
-    top: 25%
+    top: 70%
 .project-header 
     text-align: center
 .project-header .logo
@@ -204,11 +205,11 @@ header .container
 /*-----------PROJECT POPUP-----------*/ 
 #popup 
     display: none 
-    overflow: auto
+    overflow-y: scroll
     width: 94%
     margin: 0 3% 
     position: fixed
-    top: 10%
+    top: 20%
     bottom: 5%
     scrollbar-width: none
 #popup::-webkit-scrollbar
@@ -418,7 +419,6 @@ input::-webkit-inner-spin-button
         width: 100%
         max-width: 730px
         margin: 0 auto
-        top: 15%
         left: 0
         right: 0
     .project-header .logo
@@ -532,5 +532,4 @@ input::-webkit-inner-spin-button
     #hero picture
         margin: 0 auto
     #project .container
-        top: 20%
         margin: 0 auto
