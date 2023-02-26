@@ -1,3 +1,4 @@
+const popupOverlay = document.querySelector("#popup-overlay");
 const hamMenu = document.querySelector(".ham");
 const popup = document.getElementById("popup");
 const closeMenu = document.querySelector(".close-menu");
@@ -56,12 +57,13 @@ selectBtns.forEach((btn) => {
 
 const toggleModal = () => {
   popup.classList.toggle("active");
+  popupOverlay.classList.toggle("active");
 };
 
 window.addEventListener("click", function (event) {
-  if (event.target == popup) {
-    popup.classList.toggle("active");
-    resetModal();
+  if (event.target.id == "popup-overlay") {
+    popup.classList.remove('active');
+    popupOverlay.classList.remove("active");
   }
 });
 
@@ -137,4 +139,5 @@ continueBtns.forEach((btn) => {
 // Thank you popup
 confirmBtn.addEventListener("click", () => {
   confirmBtn.classList.toggle("active");
+  popupOverlay.classList.toggle("active");
 });

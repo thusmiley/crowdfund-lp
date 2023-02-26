@@ -158,7 +158,7 @@ header .container
     margin-bottom: 9px   
 .divider
     background-color: #979797
-    height: 0.1px
+    height: 1px
     width: 25%
     margin: 24px auto
 .progress-bar, .bar-green
@@ -212,29 +212,23 @@ header .container
     top: 20%
     bottom: 5%
     scrollbar-width: none
+    z-index: 3
+    background: white 
+    border-radius: 8px
 #popup::-webkit-scrollbar
     display: none
-#popup.active 
+#popup.active, #popup-overlay.active
     display: block
-#popup:after
+#popup-overlay
+    display: none
+    height: 100%
+    width: 100%
     position: fixed
-    content: ""
-    top: -10%
     left: 0
-    bottom: 0
-    right: 0
-    background: rgba(0,0,0,0.5)
-    z-index: -2
-#popup:before
-    position: absolute
-    content: ""
     top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    background: #FFF
-    z-index: -1
-    border-radius: 8px
+    background: rgba(0,0,0,0.5)
+    transition: 0.5s ease
+    z-index: 1
 .popup-header
     padding: 32px 24px 0
 .popup-header-title
@@ -320,9 +314,9 @@ input::-webkit-inner-spin-button
     color: #7A7A7A
     font-size: 14px
 .enter-pledge button
-    padding: 15px 24px
     float: right
 .enter-pledge .cta
+    padding: 15px 24px
     border: none 
 /*-----------THANK YOU POPUP-----------*/ 
 #thankyou 
@@ -336,27 +330,11 @@ input::-webkit-inner-spin-button
     justify-content: center
     align-items: center
     text-align: center
+    z-index: 3
+    background: #FFF
+    border-radius: 8px
 #thankyou.active 
     display: flex
-#thankyou:after
-    position: fixed
-    content: ""
-    top: -10%
-    left: 0
-    bottom: 0
-    right: 0
-    background: rgba(0,0,0,0.5)
-    z-index: -2
-#thankyou:before
-    position: absolute
-    content: ""
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-    background: #FFF
-    z-index: -1
-    border-radius: 8px
 #thankyou h2 
     font-size: 18px
     margin-top: 24px 
@@ -444,13 +422,14 @@ input::-webkit-inner-spin-button
     .stat-container
         display: flex
         flex-direction: row
-        justify-content: space-around
+        justify-content: flex-start
     .divider
         display: none        
     .stat:not(:last-child)
         border-right: 0.1px solid #979797
-    .stat p:not(:last-child)
         margin-right: 43px
+    .stat p:not(:last-child)
+        margin-right: 47px
     .progress-bar
         margin-top: 37px
     // About
@@ -512,7 +491,7 @@ input::-webkit-inner-spin-button
         padding-top: 24px
     .enter-pledge-wrapper::after 
         top: 90px
-        left: 305px
+        left: 310px
     .enter-pledge button
         margin-left: 40px
     // Thank you
