@@ -62,8 +62,9 @@ const toggleModal = () => {
 
 window.addEventListener("click", function (event) {
   if (event.target.id == "popup-overlay") {
-    popup.classList.remove('active');
+    popup.classList.remove("active");
     popupOverlay.classList.remove("active");
+    clearSelect();
   }
 });
 
